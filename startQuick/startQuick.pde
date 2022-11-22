@@ -1,14 +1,18 @@
 //Global Variables
-Boolean start=false;
+Boolean start=false, noNowReallyStart=false;
 //
 void setup() {} //End setup
 //
 void draw() 
 {
-  background(0); //Night Mode not considered yet
+ if (noNowReallyStart==true) background(0); //Night Mode not considered yet
 } //End draw
 //
-void keyPressed() {} //End keyPressed
+void keyPressed()
+{
+  //
+ if ( key==' ' && start==true) noNowReallyStart = true;
+} //End keyPressed
 //
 void mousePressed() 
 {
