@@ -11,7 +11,7 @@ void draw()
 void keyPressed()
 {
   //
- if ( key==' ' && start==true) noNowReallyStart = true;
+  if ( key==' ' && start==true) noNowReallyStart = true;
 } //End keyPressed
 //
 void mousePressed() 
@@ -19,6 +19,8 @@ void mousePressed()
   //
   //OS Level Start Button
   start = true;
+  println("To Start, Press The Space Bar");
+  //
 } //End mousePressed
 //
 //End Main Program
