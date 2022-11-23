@@ -1,17 +1,22 @@
 //Global Variables
 int appWidth, appHeight;
 Boolean start=false, noNowReallyStart=false;
-int quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
+float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 //
 void setup()
 {
-  size (400, 300);
+  //Display & Algorithums not considerd yet
+  size (400, 300); //Landscape
   appWidth = width;
   appHeight = height;
   //
   //Population
-  quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
-  
+  float centerX = appWidth * 1/2; //Point
+  float centerY = appHeight * 1/2; //Point
+  quitButtonX = centerX - (appWidth * 1/4);
+  quitButtonY = centerY - ( appHeight * 1/4);
+  quitButtonWidth = appWidth * 1/2;
+  quitButtonHeight = appHeight * 1/2;
 } //End setup
 //
 void draw() 
