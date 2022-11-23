@@ -50,7 +50,7 @@ void mousePressed()
   println("To Start, Press The Space Bar");
   //
   //Quit Button: Logical Rectangle, see println in draw()
-  if ( mouseX> && mouseX< && mouseY> && mouseY< ) exit();
+  if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) exit();
   //
 } //End mousePressed
 //
