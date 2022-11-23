@@ -2,11 +2,13 @@
 int appWidth, appHeight;
 Boolean start=false, noNowReallyStart=false;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
+color quitButtonColour, yellow=#FFFF00 , purple=#D630FC ;
 //
 void setup()
 {
   //Display & Algorithums not considerd yet
   size (400, 300); //Landscape
+
   appWidth = width;
   appHeight = height;
   //
@@ -21,14 +23,23 @@ void setup()
 //
 void draw() 
 {
- if (noNowReallyStart==true) { //Actual start IF
-   background(0); //Night Mode not considered yet
-   //
-   //Logical Rectangle
-   println("X-Value0", quitButtonX, mouseX, quitButtonX+quitButtonWidth);
-   println("X-Value0", quitButtonY, mouseY, quitButtonY+quitButtonHeight);
-   rect( quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight); //Quit Button
- } //End IF-Start
+  if (noNowReallyStart==true) { //Actual start IF
+    background(0); //Night Mode not considered yet
+    //
+    //Logical Rectangle
+    println("X-Value0", quitButtonX, mouseX, quitButtonX+quitButtonWidth);
+    println("X-Value0", quitButtonY, mouseY, quitButtonY+quitButtonHeight);
+    //
+    //Quit Button Hover Over Feature
+    if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight) {
+      quitButtonColour = yellow; //Remember Knight Mode
+    } else {
+      quitButtonColour = purple; //Remember Day Mode
+    } //End Hover Over
+    //
+    fill(quitButtonColour);
+    rect( quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight); //Quit Button
+  } //End IF-Start
 } //End draw
 //
 void keyPressed()
