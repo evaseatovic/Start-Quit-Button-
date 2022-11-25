@@ -13,29 +13,18 @@ void setup()
   appHeight = height;
   //
   //Population
-  float centerX = appWidth * 1/2; //Point
-  float centerY = appHeight * 1/2; //Point
-  quitButtonX = centerX - (appWidth * 1/4);
-  quitButtonY = centerY - ( appHeight * 1/4);
-  quitButtonWidth = appWidth * 1/2;
-  quitButtonHeight = appHeight * 1/2;
+ population();
 } //End setup
 //
 void draw() 
 {
   if (noNowReallyStart==true) { //Actual start IF
-    background(0); //Night Mode not considered yet
+    
     //
     //Logical Rectangle
-    println("X-Value0", quitButtonX, mouseX, quitButtonX+quitButtonWidth);
-    println("X-Value0", quitButtonY, mouseY, quitButtonY+quitButtonHeight);
+    
     //
-    //Quit Button Hover Over Feature
-    if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight) {
-      quitButtonColour = yellow; //Remember Knight Mode
-    } else {
-      quitButtonColour = purple; //Remember Day Mode
-    } //End Hover Over
+   quitButtonHoverOver();
     //
     quitButtonDraw();
   } //End IF-Start
