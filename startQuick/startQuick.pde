@@ -22,7 +22,7 @@ void draw()
     
     //
     //Logical Rectangle
-    debugLogicalRect();
+    DebuggingLogicalRectangle();
     //
    quitButtonHoverOver();
     //
